@@ -1,11 +1,12 @@
 #FROM nginx:1.26-alpine3.19-otel
+FROM nginx:1.22.1-alpine3.17-slim
 #FROM nginx:alpine
-FROM nginx:latest
-RUN apt-get update 
-RUN apt-get install -y libnginx-mod-http-dav-ext
+#FROM nginx:latest
+#RUN apt-get update 
+#RUN apt-get install -y libnginx-mod-http-dav-ext
 COPY custom-nginx/ /etc/nginx/
 COPY usr/  /usr/share/nginx/html/
-#RUN apk add nginx-mod-http-dav-ext
+RUN apk add nginx-mod-http-dav-ext
 RUN mkdir /srv/client-temp
 #RUN mkdir /srv/http/srv/http
 RUN mkdir -p /srv/http/srv/http/dav
