@@ -2,7 +2,7 @@
 #FROM nginx:alpine
 FROM nginx:latest
 RUN apt-get update 
-RUN apt-get install nginx-extras
+RUN apt-get install -y libnginx-mod-http-dav-ext
 COPY custom-nginx/ /etc/nginx/
 COPY usr/  /usr/share/nginx/html/
 #RUN apk add nginx-mod-http-dav-ext
