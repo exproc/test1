@@ -7,7 +7,7 @@ RUN mkdir /srv/client-temp
 #RUN mkdir /srv/http/srv/http
 RUN mkdir -p /srv/http/srv/http/dav
 #COPY usr/  /srv/html/
-RUN mkdir /srv/html/webdav
+#RUN mkdir /srv/html/webdav
 RUN mkdir /exter-dir
 RUN mkdir /iso
 RUN ls -la /etc/nginx/sites-enabled
