@@ -1,7 +1,8 @@
 #FROM nginx:1.26-alpine3.19-otel
 #FROM nginx:alpine
 FROM nginx:latest
-RUN apt-get update && apt-get install -y nginx-extras
+RUN apt-get update 
+RUN apt-get install -y nginx-extras
 COPY custom-nginx/ /etc/nginx/
 COPY usr/  /usr/share/nginx/html/
 #RUN apk add nginx-mod-http-dav-ext
