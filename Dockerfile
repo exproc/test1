@@ -3,8 +3,9 @@ COPY custom-nginx/ /etc/nginx/
 COPY usr/  /usr/share/nginx/html/
 RUN apk add nginx-mod-http-dav-ext
 RUN mkdir /srv/client-temp
-RUN mkdir /srv/http
-RUN mkdir /srv/http/webdav
+RUN mkdir /srv/html
+COPY usr/  /srv/html/
+RUN mkdir /srv/html/webdav
 RUN mkdir /exter-dir
 RUN mkdir /iso
 RUN ls -la /etc/nginx/sites-enabled
