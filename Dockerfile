@@ -2,7 +2,7 @@
 FROM nginx:alpine
 COPY custom-nginx/ /etc/nginx/
 COPY usr/  /usr/share/nginx/html/
-RUN apk add nginx-mod-http-dav-ext
+#RUN apk add nginx-mod-http-dav-ext
 RUN mkdir /srv/client-temp
 #RUN mkdir /srv/http/srv/http
 RUN mkdir -p /srv/http/srv/http/dav
